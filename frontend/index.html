@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>РИО – ремонт квартир в Краснодаре с поэтапной оплатой и гарантией до 3 лет </title>
+
+    <meta name="description"
+        content="Получите честный расчет стоимости ремонта с выгодой до 35% за счет наших скидок на покупку материалов у производителей + страхование квартиры на 1 000 000 рублей в подарок. Отремонтировали уже более 200 квартир. Убираем за собой после ремонта">
+    <meta property="og:title" content="ДОМ РИО – ремонт квартир в Краснодаре с поэтапной оплатой и гарантией до 3 лет ">
+    <meta property="og:description"
+        content="Получите честный расчет стоимости ремонта с выгодой до 35% за счет наших скидок на покупку материалов у производителей + страхование квартиры на 1 000 000 рублей в подарок. Отремонтировали уже более 200 квартир. Убираем за собой после ремонта">
+
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/style.css') }}">
+
+    <script defer src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <script defer src="{{ url_for('static', path='js/libs/own/owl.carousel.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', path='js/libs/own/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='js/libs/own/owl.theme.default.css') }}">
+
+    <!-- <script defer src="js/smtp.js"></script> -->
+
+    <script defer src="{{ url_for('static', path='js/main.js') }}"></script>
+    
+
+</head>
+
+<body>
+
+    <header>
+        <section class="wrap-border">
+            <div class="wrap header">
+                <div class="header__logo">
+                    <img class="t967__imglogo t967__imglogomobile" src="{{ url_for('static', path='img/logo2.jpg') }}" imgfield="img" alt="">
+                </div>
+
+                <div class="header__communication site-navigation">
+                    <ul class="header__contact">
+                        <li class="header__item_telegram">
+                            <a href="https://t.me/igor_popov" target="_blank" rel="nofollow noopener"
+                                aria-label="telegram">
+                                <svg class="t-sociallinks__svg" role="presentation" width="25px" height="25px"
+                                    viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M83.1797 17.5886C83.1797 17.5886 90.5802 14.7028 89.9635 21.711C89.758 24.5968 87.9079 34.6968 86.4688 45.6214L81.5351 77.9827C81.5351 77.9827 81.124 82.7235 77.4237 83.548C73.7233 84.3724 68.173 80.6623 67.145 79.8378C66.3227 79.2195 51.7273 69.9438 46.5878 65.4092C45.1488 64.1724 43.5042 61.6989 46.7934 58.8132L68.3785 38.201C70.8454 35.7274 73.3122 29.956 63.0336 36.9642L34.2535 56.5459C34.2535 56.5459 30.9644 58.6071 24.7973 56.752L11.4351 52.6295C11.4351 52.6295 6.50135 49.5377 14.9298 46.4457C35.4871 36.7579 60.7724 26.864 83.1797 17.5886Z"
+                                        fill="#414042"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="header__item_whatsUp">
+                            <a href="https://wa.me/79284187005" target="_blank" rel="nofollow noopener"
+                                aria-label="whatsapp">
+                                <svg class="t-sociallinks__svg" role="presentation" width="25px" height="25px"
+                                    viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M50.168 10C60.8239 10.004 70.8257 14.1522 78.346 21.6819C85.8676 29.2114 90.0066 39.2185 90 49.8636C89.9906 71.8252 72.1203 89.6956 50.1668 89.6956H50.1508C43.4852 89.6929 36.9338 88.0208 31.1162 84.8468L10 90.3853L15.6516 69.7437C12.1665 63.7042 10.3323 56.851 10.3349 49.8304C10.343 27.8676 28.2134 10 50.168 10V10ZM61.5376 54.7631C62.4507 55.0954 67.3433 57.5023 68.3389 58.0009C68.5313 58.0971 68.7113 58.1842 68.8784 58.265C69.5753 58.602 70.0458 58.8296 70.2462 59.1651C70.4947 59.5799 70.4947 61.5736 69.6654 63.8982C68.8359 66.2229 64.8605 68.3442 62.9478 68.63C61.2319 68.8865 59.0627 68.9928 56.6782 68.2353C55.2322 67.7767 53.3794 67.1653 51.0041 66.1392C41.6698 62.1082 35.3628 53.06 34.1747 51.3556C34.0919 51.2368 34.0341 51.1538 34.0017 51.1106L33.9981 51.1056C33.486 50.4243 29.9372 45.7022 29.9372 40.8149C29.9372 36.2325 32.1873 33.8303 33.2244 32.7232C33.2961 32.6467 33.3619 32.5763 33.4208 32.5118C34.3341 31.5149 35.412 31.2664 36.0751 31.2664C36.7385 31.2664 37.4029 31.2717 37.9826 31.301C38.0541 31.3046 38.1286 31.304 38.2056 31.3037C38.786 31.3001 39.5087 31.2957 40.2221 33.0089C40.4976 33.6707 40.9012 34.653 41.3265 35.6882C42.1818 37.7702 43.1251 40.066 43.2912 40.399C43.5397 40.8974 43.7058 41.4782 43.3736 42.1427C43.323 42.2436 43.2763 42.3387 43.2318 42.4295C42.9831 42.9364 42.7995 43.3104 42.378 43.8029C42.2125 43.9963 42.0413 44.2045 41.8703 44.4131C41.5273 44.8309 41.1842 45.2488 40.8853 45.5467C40.387 46.0425 39.8686 46.5808 40.4493 47.5777C41.0303 48.5731 43.028 51.8323 45.9867 54.472C49.1661 57.3091 51.93 58.5078 53.3318 59.1157C53.6058 59.2346 53.8279 59.3308 53.9907 59.4124C54.9849 59.9109 55.5658 59.8284 56.1465 59.1637C56.7274 58.4993 58.6347 56.2583 59.298 55.2615C59.9612 54.2646 60.6259 54.4307 61.5376 54.7631V54.7631Z"
+                                        fill="#414042"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="header__tel">
+                            <p>+7(928)418-70-05</p>
+                        </li>
+                        <li class="header__remove-btn">
+                            <button class="btn-open-popup" onclick="togglePopup()">
+                                Позвоните мне
+                            </button>
+                        </li>
+                        <!-- попап на обратны    звонок -->
+                        <div id="popupOverlay" class="overlay-container">
+                            <div class="popup-box">
+                                <h2 style="color: #e74c3c;">Обратный звонок</h2>
+                                <form method="post" class="form-container" onsubmit="orderСall()">
+                                    <label class="form-label" for="name">Ваше имя:</label>
+                                    <input class="form-input" type="text" placeholder="Введите ваше имя" id="name"
+                                        name="name" required>
+
+                                    <label class="form-label" for="tel">Номер телефона:</label>
+                                    <input class="form-input" type="tel" placeholder="Введите ваш номер телефона"
+                                        id="tel" name="tel" required>
+
+                                    <button class="btn-submit" type="submit" value="отправить">Отправить</button>
+                                </form>
+
+                                <button class="btn-close-popup" onclick="togglePopup()">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </ul>
+
+
+                    <!-- <div class="cross"><svg class="cross_svg" viewBox="0 0 27 27" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1.38838 27C1.03272 27 0.677068 26.8647 0.406851 26.5925C-0.135617 26.05 -0.135617 25.1705 0.406851 24.6281L24.6281 0.406851C25.1705 -0.135617 26.05 -0.135617 26.5925 0.406851C27.1349 0.949319 27.1349 1.8288 26.5925 2.3716L2.3716 26.5925C2.09935 26.863 1.7437 27 1.38838 27Z"
+                                fill="#f1703c" />
+                            <path
+                                d="M25.6113 27C25.2556 27 24.9003 26.8647 24.6298 26.5925L0.406851 2.3716C-0.135617 1.8288 -0.135617 0.949319 0.406851 0.406851C0.94932 -0.135617 1.8288 -0.135617 2.3716 0.406851L26.5925 24.6281C27.1349 25.1705 27.1349 26.05 26.5925 26.5925C26.3202 26.863 25.9649 27 25.6113 27Z"
+                                fill="#f1703c" />
+                        </svg>
+                    </div> -->
+
+                </div>
+                <!-- <div class="button_menu">
+                    <svg class="button_menu__burger" viewBox="0 0 47 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect class="rect1" x="0.0400391" fill="#1E1E1E" />
+                        <rect class="rect1" x="0.0400391" y="19" fill="#1E1E1E" />
+                        <rect class="rect1" x="0.0400391" y="9" fill="#1E1E1E" />
+                    </svg>
+                </div> -->
+            </div>
+        </section>
+
+        <nav class="menu wrap">
+            <ul class="menu__ul">
+                <li class="menu__list"><a href="#aboutUs">О нас</a></li>
+                <li class="menu__list"><a href="#ourWork">Наши проекты</a></li>
+                <li class="menu__list"><a href="#worker">Почему мы?</a></li>
+                <li class="menu__list"><a href="#designDescription">Услуги</a></li>
+                <!-- <li class="menu__list"><a href="">Частые вопросы</a></li> -->
+                <li class="menu__list"><a href="#footer">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <section class="about-gifts">
+            <div class="about-gifts__wrap-one">
+                <div class="about-gifts__insurance">
+                    <div class="about-gifts__insurance-wrap">
+                        <img class="about-gifts__insurance-img" src="{{ url_for('static', path='/img/gift.svg') }}" alt="">
+                        <p class="about-gifts__insurance-p">страхование на 1 000 000 рублей в подарок!</p>
+                    </div>
+                </div>
+                <div class="about-gifts__guarantee">
+                    <h1 class="about-gifts__guarantee-h1-one">Комплексный ремонт<br> квартир в Краснодаре<br> <span
+                            class="about-gifts__guarantee-span-two">с поэтапной оплатой<br> и гарантией до 5 лет</span>
+                    </h1>
+
+                </div>
+            </div>
+
+            <div class="about-gifts__wrap-two">
+                <p class="p-one">Получите честный расчет стоимости ремонта <span>c выгодой до 35%</span> за счет наших
+                    скидок на покупку
+                    материалов у производителей
+                </p>
+                <a onclick="togglePopup()" target="" data-buttonfieldset="button" role="button"
+                    aria-haspopup="dialog">рассчитать стоимость ремонта
+                </a>
+                <p class="p-two">При заключении договора – технический проект <b>в подарок</b></p>
+            </div>
+
+        </section>
+
+        <section class="preview owl-carousel owl-theme">
+            <div class="promo">
+                <img src="{{ url_for('static', path='/img/1.jpg') }}" alt="">
+            </div>
+            <div class="promo">
+                <img src="{{ url_for('static', path='/img/2.png') }}" alt="">
+            </div>
+            <div class="promo">
+                <img src="{{ url_for('static', path='/img/3.png') }}" alt="">
+            </div>
+            <div class="promo">
+                <img src="{{ url_for('static', path='/img/4.png') }}" alt="">
+            </div>
+            <!-- <div class="promo">
+                <img src="/img/5.jfif" alt="">
+            </div>
+            <div class="promo">
+                <img src="/img/6.jfif" alt="">
+            </div> -->
+            <div class="promo">
+                <img src="{{ url_for('static', path=' /img/7.png') }}" alt="">
+            </div>
+
+        </section>
+
+        <section class="why-we">
+            <h2 id="aboutUs" class="why-we__h2">Почему у наших клиентов <br><span>не возникает трудностей</span><br>с
+                ремонтом?</h2>
+            <div class="why-we__wrap">
+                <div class="why-we__block1 block">
+                    <img src="{{ url_for('static', path='img/log1.svg') }}" alt="">
+                    <h3>Поэтапная оплата работ</h3>
+                    <p>Вы оплачиваете
+                        работу только после
+                        приемки каждого этапа</p>
+                </div>
+                <div class="why-we__block2 block">
+                    <img src="{{ url_for('static', path='img/log2.svg') }}" alt="">
+                    <h3>Выгода до 35% на покупку материалов</h3>
+                    <p>Мы закупаем материалы
+                        со скидкой напрямую
+                        у крупнейших поставщиков</p>
+                </div>
+                <div class="why-we__block3 block">
+                    <img src="{{ url_for('static', path='img/log3.svg') }}" alt="">
+                    <h3>Даем до 5-ти лет гарантии на работу</h3>
+                    <p>На этот срок осуществляем гарантийное обслуживание
+                        на работы за наш счет</p>
+                </div>
+                <div class="why-we__block4 block">
+                    <img src="{{ url_for('static', path='img/log4.svg') }}" alt="">
+                    <h3>Строгое
+                        соблюдение сроков</h3>
+                    <p>Начинаем ремонтные работы уже через 3 дня после подписания договора</p>
+                </div>
+                <div class="why-we__block5 block">
+                    <img src="{{ url_for('static', path='img/log5.svg') }}" alt="">
+                    <h3>Прозрачность
+                        работы</h3>
+                    <p>Вы всегда видите, на каком этапе ваш объект, ежедневно отправляем фото и видео-отчет</p>
+                </div>
+                <div class="why-we__block6 block">
+                    <img src="{{ url_for('static', path='img/log6.svg') }}" alt="">
+                    <h3>Никакого
+                        строительного мусора</h3>
+                    <p>После ремонта заедете в чистую квартиру — мы уберем
+                        за собой весь мусор</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="our-work">
+            <h2 id="ourWork" class="our-work__h2">Реализовали <br><span>более 30 объектов</span><br>за прошлый год</h2>
+            <div class="our-work__wrap">
+                <div class="our-work__possition-block"><img src="{{ url_for('static', path='img/IMG_6021-1.jpg') }}" alt=""></div>
+                <div class="our-work__possition-block"><img src="{{ url_for('static', path='img/IMG_6021-2.jpg') }}" alt=""></div>
+                <div class="our-work__possition-block"><img src="{{ url_for('static', path='img/IMG_6021-3.png') }}" alt=""></div>
+                <div class="our-work__possition-block"><img src="{{ url_for('static', path='img/IMG_6021-4.png') }}" alt=""></div>
+                <div class="our-work__possition-block"><img src="{{ url_for('static', path='img/IMG_6021-5.jpg') }}" alt=""></div>
+                <div class="our-work__possition-block"><img src="{{ url_for('static', path='img/IMG_6021-6.jpg') }}" alt=""></div>
+                <div class="our-work__possition-block"><img src="{{ url_for('static', path='img/IMG_6021-7.jpg') }} " alt=""></div>
+                <div class="our-work__possition-block"><img src="{{ url_for('static', path='img/IMG_6021-8.jpg') }}" alt=""></div>
+                <div class="our-work__possition-block"><img src="{{ url_for('static', path='img/IMG_6021-9.jpg') }}" alt=""></div>
+                <!-- <div class="our-work__possition-block"><img src="img/IMG_6021-10.png" alt=""></div> -->
+                <div class="our-work__possition-block"><img src="{{ url_for('static', path='img/IMG_6021-11.png') }}" alt=""></div>
+                <div class="our-work__possition-block"><img src="{{ url_for('static', path='img/IMG_6021-12.png') }}" alt=""></div>
+                <!-- <div class="our-work__possition-block"><img src="img/IMG_6021-13.png" alt=""></div> -->
+                <!-- <div class="our-work__possition-block"><img src="img/IMG_6021-14.png" alt=""></div> -->
+                <div class="our-work__possition-block"><img src="{{ url_for('static', path='img/IMG_6021-15.png') }}" alt=""></div>
+            </div>
+        </section>
+
+        <section class="design">
+            <h2 class="design__h2">Полный <span>дизайн проект</span></h2>
+            <p class="design__p">Это пакет документов, который детально отражает концепцию будущего интерьера: цветовые
+                решения,
+                композицию, расположение мебели и света. В полный дизайн проект входят:</p>
+            <div class="design__wrap">
+                <div class="design__wrap-block">
+                    <div class="design__num">1</div>
+                    <div class="design__block">
+                        <h3 class="design__block-h3">технический проект</h3>
+                        <p class="design__block-p">Чертежная документация отражает пошагово, как
+                            нужно проводить ремонтные работы по конкретному
+                            проекту
+                        </p>
+                    </div>
+                </div>
+                <div class="design__wrap-block">
+                    <div class="design__num" style="background-color: #36405b;">2</div>
+                    <div class="design__block">
+                        <h3 class="design__block-h3" style="color: rgb(241, 112, 60);">стилистическое решение</h3>
+                        <p class="design__block-p">Помогает заказчику представить визуально будущий интерьер
+                        </p>
+                    </div>
+                </div>
+                <div class="design__wrap-block">
+                    <div class="design__num" style="background-color: #36405b;">3</div>
+                    <div class="design__block">
+                        <h3 class="design__block-h3" style="color: rgb(241, 112, 60);">ведомость - объемы и метражи</h3>
+                        <p class="design__block-p">В ней отражается количество отделочных материалов для помещений. На
+                            основе этого рассчитывается примерная стоимость проекта
+                        </p>
+                    </div>
+                </div>
+                <div class="design__wrap-block">
+                    <div class="design__num">4</div>
+                    <div class="design__block">
+                        <h3 class="design__block-h3">ведомость - работы</h3>
+                        <p class="design__block-p">Общая ведомость по всем работам, которые будут выполнены в процессе
+                            осуществления дизайн-проекта
+                        </p>
+                    </div>
+                </div>
+                <div class="design__project">
+                    <img src="{{ url_for('static', path='/img/design-1.png') }}" alt="">
+                    <img src="{{ url_for('static', path='/img/design-2.png') }}" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="application">
+            <div class="application__wrap">
+                <div class="application__wrap-block">
+                    <h2 class="application__h2">Вы отслеживаете каждый этап ремонта <span>в приложении «101»</span></h2>
+                    <p class="application__p">Вы будете видеть всю информацию по ремонту в режиме реального времени</p>
+                </div>
+                <div class="application__wrap-img"><img class="application__img" src="{{ url_for('static', path='/img/application.png') }}" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="design-description">
+            <h2 id="designDescription" class="design-description__h2"><span>Осуществим полный цикл:</span> от разработки
+                дизайн-проекта до его
+                реализации</h2>
+            <div class="design-description__wrap">
+                <div class="design-description__elem">Разработаем дизайн интерьера, учитывая Ваши предпочтения</div>
+                <div class="design-description__elem">Выполним все необходимые чертежи для ремонтных работ по вашему
+                    объекту: планирование сантехники, электрики, план по напольному покрытию и т.д.</div>
+                <div class="design-description__elem">Создадим качественные и эстетичные визуализации, которые помогут
+                    вам понять, как будет выглядеть ваш будущий интерьер, с учетом всех деталей</div>
+                <div class="design-description__elem">Осуществим все виды ремонтных и строительных работ</div>
+                <div class="design-description__elem">Выполним контроль качества выполняемых работ на вашем объекте,
+                    согласно утвержденного проекта</div>
+                <div class="design-description__elem">Подберем все необходимые материалы и полную комплектацию (мебель,
+                    шторы, светильники и т.д.) Под ключ - заходи и живи!</div>
+            </div>
+        </section>
+
+        <section class="worker">
+            <h2 id="worker" class="worker__h2">После старта работ мы закрепим за вами <span>руководителя проекта</span>
+            </h2>
+            <div class="worker__wrap">
+                <!-- <h2 class="worker__h2">После старта работ мы закрепим за вами <span>руководителя проекта</span></h2> -->
+                <img class="worker__helmet" src="{{ url_for('static', path='/img/helmet.png') }}" alt="">
+                <p class="worker__p">Я буду регулярно присылать вам фото и видео процесса вашего ремонта, а также
+                    контролировать процесс
+                    работ в вашей квартире до момента, пока вы не будете довольны <span>результатом на 100%!</span></p>
+                <img class="worker__people" src="{{ url_for('static', path='/img/design-1.png') }} " alt="">
+            </div>
+        </section>
+
+        <section class="estimates">
+            <div class="estimates__wrap">
+                <div class="estimates__wrap-block">
+                    <h2 class="estimates__h2">уже рассчитали смету <span><br>в другой компании?</span></h2>
+                    <p class="estimates__p">Отправьте нам уже рассчитанную смету, мы проанализируем технологические
+                        процессы, покажем слабые места и сделаем более выгодное предложение</p>
+                </div>
+                <div class="estimates__wrap-img"><img class="estimates__img" src="{{ url_for('static', path='/img/estimates.png') }}" alt="">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer" class="footer">
+        <div class="footer-contact">
+            <h3 class="footer-contact__h3">Наши контакты</h3>
+            <div class="footer-contact__wrap">
+                <div class="footer-contact__address">
+                    <p class="footer-contact__address-p1">Адрес</p>
+                    <p class="footer-contact__address-p2">г.Краснодар, ул.Калинина д.333, офис 8</p>
+                </div>
+                <div class="footer-contact__tel">
+                    <p class="footer-contact__tel-p">Телефон</p>
+                    <a class="footer-contact__tel-a" href="tel:+79284187005">+7(928)418-70-05</a>
+                </div>
+                <div class="footer-contact__email">
+                    <p class="footer-contact__email-p1">Email</p>
+                    <p class="footer-contact__email-p2">Krasnodarrio@yandex.ru</p>
+                </div>
+
+            </div>
+            <div class="footer-contact__IP">
+                <p class="footer-contact__IP-p"> ИП Попов И.Н. ИНН: 234805068902 ОГРНИП: 324237500082830</p>
+                <a href="rio/policy">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+<script>
+      async function orderСall() {
+        event.preventDefault();
+        const name = document.getElementById("name").value;
+        const tel = document.getElementById("tel").value;
+        const response = await fetch('/rio', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify({name: name, tel: tel})
+          });
+          togglePopup();
+          let result = await response.json();
+    };
+</script>
