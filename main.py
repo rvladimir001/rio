@@ -25,8 +25,7 @@ async def get_policy(request: Request):
 @app.post("/rio", tags=["Заказать звонок"], summary="отправка форма с данными для заказа звонка")
 async def send_message(client: MessageRequest):
     try:
-        idChat = 136650324
-        # temp id 136650324
+        idChat = 376817201
         await send_message_to_telegram(idChat, "Имя: {}, телефон: {}".format(client.name, client.tel))
         return {"message": "Сообщение отправлено в Telegram!"}
     except Exception as e:
