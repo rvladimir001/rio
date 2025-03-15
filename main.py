@@ -6,6 +6,7 @@ from sender import send_message_to_telegram
 from pydantic import BaseModel
 
 app = FastAPI()
+app.config["PREFERRED_URL_SCHEME"] = "https"
 app.mount("/static", StaticFiles(directory="frontend/static"), name="static")
 
 class MessageRequest(BaseModel):
